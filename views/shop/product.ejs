@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <%- include('../partials/head') %>
+  </head>
+  <body class="container">
+
+    <header>
+        <%- include('../partials/headers') %>
+    </header>
+
+    <main>
+      <div class="row mt-4">
+        <div class="col-lg-5 text-center border-right border-secondery">
+          <img src="https://theurbanpetstore-static.myshopblocks.com/images/2019/11/contain/256x256/080bf8a95fc37f2c79ce89a02a464815.jpg">
+        </div>
+        <div class="col-lg-7">
+          <h5><%= product.title %></h5>
+          <p><%= product.description %></p>
+          <p><%= product.price / 100 %> €</p>
+          <div class="dropdown">
+            <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <%- include('partials/head') %>
+  </head>
+  <body class="container">
+
+    <header>
+        <%- include('partials/headers') %>
+    </header>
+
+    <main>
+        <h1>Register</h1>
+        <form action='/register' method='POST'>
+          <div class="form-group">
+            <input type="text" id="login" class="form-control" name="login" placeholder="login" minlength="5" maxlength="20" required>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" class="form-control" name="email" placeholder="email" required>
+          </div>
+
+          <div class="form-group">
+            <input type="password" id="password" class="form-control" name="password" placeholder="password" required>
+          </div>
+
+          <div class="form-group">
+            <input type="password" id="confirmPassword" class="form-control" name="confirmPassword" placeholder="password confirmation" required>
+          </div>
+
+          <input type="submit" class="btn btn-primary" value="Sign up">
+        </form>
+    </main>
+
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+
+  </body>
+</html>
+
+

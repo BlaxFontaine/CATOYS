@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <%- include('../../partials/head') %>
+  </head>
+  <body class="container">
+
+    <header>
+        <%- include('../../partials/headers') %>
+    </header>
+
+    <main>
+        <h1>Add a CATegory</h1>
+        <form action='/admin/add/category' method='POST'>
+          <div class="form-group">
+            <input type="text" id="title" class="form-control" name="title" placeholder="title" minlength="5" maxlength="20" required>
+          </div>
+          <input type="submit" class="btn btn-primary" value="Add CATegory">
+        </form>
+    </main>
+
+    <footer>
+        <%- include('../../partials/footer') %>
+    </footer>
+
+  </body>
+</html>
+
+

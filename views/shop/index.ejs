@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <%- include('../partials/head') %>
+  </head>
+  <body class="container">
+
+    <header>
+        <%- include('../partials/headers') %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <h1>CATOYS shop</h1>
+            <p>Shop for toys !</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3">
+          <% products.forEach(function(product){ %>
+          <a href="/shop/<%=product._id%>" style="text-decoration: none;">
+            <div class="col mb-4">
+              <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <img src="https://theurbanpetstore-static.myshopblocks.com/images/2019/11/contain/256x256/080bf8a95fc37f2c79ce89a02a464815.jpg" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%= product.title %></h5>
+                  <p class="card-text"><%= product.description %></p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <% }); %>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+
+  </body>
+</html>
