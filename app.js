@@ -5,10 +5,10 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var app = express();
 
-
+const PORT = process.env.PORT || 5000;
 
 // mongodb connection
-mongoose.connect("mongodb://localhost:27017/catoys", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/catoys", { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 
 //mongo error
@@ -60,6 +60,6 @@ app.use(function(err, req, res, next) {
 });
 
 // listen on port 4242
-app.listen(4242, function () {
-  console.log('Express app listening on port 4242');
+app.listen(PORT, function () {
+  console.log(`Express app listening on port ${PORT}`);
 });
