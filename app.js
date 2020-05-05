@@ -3,7 +3,11 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
+var cors = require('cors');
+
 var app = express();
+
+app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
